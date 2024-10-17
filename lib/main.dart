@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_phone_number/phone.dart';
 
 void main() {
   runApp(const MyApp());
@@ -112,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Phone(controller: TextEditingController())
           ],
         ),
       ),
