@@ -1,0 +1,26 @@
+# Set the iOS platform version
+platform :ios, '13.0'
+
+# Disable CocoaPods stats collection to improve build speed
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+flutter_application_path = File.expand_path('..', __FILE__)
+load File.join(flutter_application_path, '.flutter-plugins-dependencies')
+
+target 'Runner' do
+  use_frameworks! # Required for some Swift-based plugins
+  use_modular_headers!
+
+  # Add the PhoneNumberKit pod in case it’s required by a transitive dependency
+  pod 'PhoneNumberKit', '~> 3.3'
+
+  # This installs all Flutter plugins and dependencies
+  install_all_flutter_pods File.dirname(File.realpath(__FILE__))
+end
+
+# Ensure the Podfile is configured correctly
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+  end
+end
