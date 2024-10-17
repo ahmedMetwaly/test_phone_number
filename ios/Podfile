@@ -4,8 +4,8 @@ platform :ios, '13.0'
 # Disable CocoaPods stats collection to improve build speed
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
-flutter_application_path = File.expand_path('..', __FILE__)
-load File.join(flutter_application_path, '.flutter-plugins-dependencies')
+#flutter_application_path = File.expand_path('..', __FILE__)
+#load File.join(flutter_application_path, '.flutter-plugins-dependencies')
 
 target 'Runner' do
   use_frameworks! # Required for some Swift-based plugins
