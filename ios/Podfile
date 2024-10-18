@@ -15,7 +15,7 @@ target 'Runner' do
   pod "PhoneNumberKit", "~> 3.3"
 
   # This installs all Flutter plugins and dependencies
-  install_all_flutter_pods File.dirname(File.realpath(__FILE__))
+  #install_all_flutter_pods File.dirname(File.realpath(__FILE__))
 end
 
 # Ensure the Podfile is configured correctly
