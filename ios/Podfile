@@ -8,14 +8,14 @@ ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 #load File.join(flutter_application_path, '.flutter-plugins-dependencies')
 
 target 'Runner' do
-  #use_frameworks! # Required for some Swift-based plugins
-  #use_modular_headers!
+  use_frameworks! # Required for some Swift-based plugins
+  use_modular_headers!
 
   # Add the PhoneNumberKit pod in case it’s required by a transitive dependency
   pod "PhoneNumberKit", "~> 3.3"
 
-  # This installs all Flutter plugins and dependencies
-  #install_all_flutter_pods File.dirname(File.realpath(__FILE__))
+  This installs all Flutter plugins and dependencies
+  install_all_flutter_pods File.dirname(File.realpath(__FILE__))
 end
 
 # Ensure the Podfile is configured correctly
