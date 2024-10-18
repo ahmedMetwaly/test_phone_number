@@ -22,7 +22,6 @@ class Phone extends StatelessWidget {
         },
         selectorConfig: const SelectorConfig(
             selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
-            useBottomSheetSafeArea: true,
             setSelectorButtonAsPrefixIcon: true,
             leadingPadding: 15,
             trailingSpace: false),
